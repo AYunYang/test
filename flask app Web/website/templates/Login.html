@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Book Lit: Log In</title>
+        <link rel="stylesheet" href="../static/Login.css">
+        <script defer src="../static/Login.js"></script>
+
+        <body>
+            <form id="loginForm">
+                <h1>Log In Page</h1>
+                <label>
+                    <strong>SP Admission Number (No "P")</strong> <!-- Strong is just the font-->
+                    <input type="text" class="admin_no"  placeholder="0000000-9999999" minlength="7" maxlength="7" required id="admin_no">
+                </label>
+
+                <label>
+                    <strong>Password</strong>
+                    <input type="password" class="password"  minlength="6" maxlength="15" placeholder="Password" required id="password">
+                </label>
+
+                <p id="show" class="show" style="font-size: larger;"></p>
+                <p class="question">Don't have a account yet? <a href="SignUp.html">Sign up here!</a></p>
+
+                <section class="container">
+                    <div class="submit"><button id="btn_submit" type="submit">Log In</button></div>
+                    <hr>
+                    <div class="reset"><button class="reset" type="reset" >reset Input</button></div>
+                </section>
+            </form>
+
+        </body>
+    </head>
+</html>
