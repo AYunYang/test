@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic World</title>
+    <link rel="stylesheet" href="Booklist.css">
+    <script src="Booklist.js"></script>
+</head>
+<body>
+
+    <div class="book" id="book">
+        <img src="../Images/book2.png" alt="">
+        <div class="details">
+            <div class="bname">In your eyes</div>
+            <div class="author">This book is by: Name</div><hr>
+            <div class="description">Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sit recusandae laboriosam minima doloremque numquam maiores nesciunt fugit, nobis deleniti assumenda consequatur minus, expedita veniam sequi facilis ipsam, saepe facere.</div>
+            <div class="reservebtn">
+                <button class="button" onclick="togglePopup()">Reserve book</button>
+            </div>
+            <div class="HOMEbtn">
+                <a href="../index.html">Home</a>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup-1">
+        <div class="overlay">
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup()">&times;</div>
+          <h1>Reserve book?</h1>
+          <br>
+          <label>Choose a location</label>
+          <select id="dropdown">
+              <option>Choose location</option>
+              <option value="Woodlands">Woodlands</option>
+              <option value="Yishun">Yishun</option>
+              <option value="Jurong">Jurong</option>
+          </select>
+
+          <br><br>
+          <button type="submit" class="submit" id="submit" onclick="subform()">Submit</button>
+          <p id="show" class='show' style="font-size: larger;"></p>
+
+        </div>
+      </div>
+      <a id="bookid" style="display: none;">Book2</a> <!-- Stores BookId, Change when used for diff books -->
+</body>
+</html>

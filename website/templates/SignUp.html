@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book Lit: SignUp</title>
+        <link rel="stylesheet" href="../static/SignUp.css">
+        <script src="../static/SignUp.js"></script>
+        <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+        
+
+        <body>          
+            <form onsubmit="return func1();" id="myForm">
+                <a href="Login.html"> &larr; Go back </a>
+                <h1>Sign Up Page</h1>           
+                <label>
+                    <strong>SP Admission Number (No "P")</strong> <!-- Strong is just the font-->
+                    <input type="text" class="admin_no"  placeholder="0000000-9999999" minlength="7" maxlength="7" required id="admin_no" name="admin_no">
+                </label>
+                
+                <label>
+                    <strong>Password</strong> 
+                    <input type="password" class="password"  minlength="6" maxlength="15" placeholder="Password" required id="password" name="password">
+                </label>
+                
+                <label>
+                    <strong>Confirm Password</strong> 
+                    <input type="password" class="confirmpassword"  minlength="6" maxlength="15" placeholder="Confirm password" required id="confirmpassword" name="confirmpassword">
+                </label>
+                <label>
+                    <p id="show" class='show' style="font-size: larger;"></p>
+                </label>
+                <section class="container">
+                    <div class="submit"><button class="sumbit" type="submit" onclick="SubForm()">Sign Up</button></div>
+                    <hr>
+                    <div class="reset"><button class="reset" type="reset" >reset Input</button></div>
+                </section>
+                
+            </form>
+            
+        </body>
+    </head>
+</html>

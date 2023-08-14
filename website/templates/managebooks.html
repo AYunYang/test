@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage</title>
+    <style>
+        .reserveBTN {
+            float: right;
+            color: crimson;
+        }
+
+        .loanedBTN {
+            float: right;
+        }
+    </style>
+</head>
+<body onload="booklist()">
+    <div id="all-books">
+    </div>
+
+<script src="../static/managebooks.js"></script>
+
+<script>
+    function cancelbook(){
+        alert("Your book reservation has been cancelled.");
+    }
+</script>
+
+<script>
+    function extendbook(){
+        alert("Your book's loan period has been extended for 7 days.");
+    }
+</script>
+
+</body>
+</html>
