@@ -1,6 +1,29 @@
-function togglePopup() {
-  document.getElementById("popup-1").classList.toggle("active");
-  console.log("success");
+async function togglePopup() {
+  try {
+    const response = await fetch(
+      "https://api.apispreadsheets.com/data/tqDVavbc09WjAg9o/"
+    );
+    const data = await response.json();
+
+    const activeEntry = data.data.find((entry) => entry.active === 1);
+
+    if (activeEntry) {
+      const reservedBookCount = Object.keys(activeEntry).filter(
+        (key) => key.startsWith("Book") && activeEntry[key] !== ""
+      ).length;
+
+      if (reservedBookCount > 9) {
+        console.log("invalid");
+        // Any other code to happen if they cannot book
+      } else {
+        console.log("valid");
+        document.getElementById("popup-1").classList.toggle("active");
+        console.log("success");
+      }
+    }
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
 }
 
 function subform() {
@@ -38,5 +61,6 @@ function subform() {
       }, 2000);
     } else {
       console.error("Request failed");
-    }});
+    }
+  });
 }
