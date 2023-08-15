@@ -41,6 +41,10 @@ async function togglePopup() {
   }
 }
 
+function ClosePopup() {
+  document.getElementById("popup-1").classList.toggle("active");
+}
+
 function subform() {
   const dropdownvalue = document.getElementById("dropdown").value;
   const bookId = document.getElementById("bookid").innerText; // Extracting book ID from HTML
