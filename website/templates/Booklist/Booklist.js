@@ -12,13 +12,28 @@ async function togglePopup() {
         (key) => key.startsWith("Book") && activeEntry[key] !== ""
       ).length;
 
-      if (reservedBookCount > 9) {
-        console.log("invalid");
-        // Any other code to happen if they cannot book
+      const bookId = document.getElementById("bookid").innerText;
+      const bookCheck = activeEntry[bookId] === "" ? [bookId] : [];
+
+      console.log("Active entry:", activeEntry);
+      console.log("Reserved book count:", reservedBookCount);
+      console.log("Book check:", bookCheck);
+
+      if (bookCheck.length > 0) {
+        console.log("Book Unreserved");
+        //Logic for an unreserved book
+        if (reservedBookCount > 9) {
+          console.log("invalid");
+          alert("You have more than 10 Books reserved");
+        } else {
+          console.log("valid");
+          document.getElementById("popup-1").classList.toggle("active");
+          console.log("success");
+        }
       } else {
-        console.log("valid");
-        document.getElementById("popup-1").classList.toggle("active");
-        console.log("success");
+        console.log("Book Reserved");
+        alert("Book has already been reserved");
+        //Logic for a reserved book
       }
     }
   } catch (error) {
